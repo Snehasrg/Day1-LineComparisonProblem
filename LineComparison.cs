@@ -8,22 +8,34 @@ namespace LineComparisonProblem
 {
     public class LineComparison
     {
-        public static void calculatelength()
+        public static void checkLine()
         {
-            double x1, x2, y1, y2;
-            double lengthofline;
+            Console.WriteLine("Enter x1 :- ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter x2 :- ");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter y1 :- ");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter y2 :- ");
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a1 :- ");
+            int a1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a2 :- ");
+            int a2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter b1 :- ");
+            int b1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter b2 :- ");
+            int b2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter First Line(x1,y1)");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            y1 = Convert.ToDouble(Console.ReadLine());
+            double Length1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine("Length of First line is  :- " + Length1);
 
-            Console.WriteLine("Enter Second Line(x2,y2)");
-            x2 = Convert.ToDouble(Console.ReadLine());
-            y2 = Convert.ToDouble(Console.ReadLine());
+            double Length2 = Math.Sqrt(Math.Pow(a2 - a1, 2) + Math.Pow(b2 - b1, 2));
+            Console.WriteLine("Length of Second line is  :- " + Length2);
 
-            lengthofline = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine("The length between First Line and Second Line is" + lengthofline);
-
+            // Console.WriteLine(System.Object.ReferenceEquals(Length1, Length2));
+            //Console.WriteLine("Equals = "+ (Length1==Length2));
+            Console.WriteLine("Equals = " + Length1.Equals(Length2));
         }
     }
 }
